@@ -70,12 +70,11 @@ if (mysqli_num_rows($result) > 0) {
           <div class="modal_delivery_content">
              <img class="modal_exit" src="close.png" alt="" />
              <form  class="modal_form" action="" method="POST" id="create">
-              <input type="text" name="editId" value="'. $row["id"] .'">
               <input type="text" name="editName" value="'. $row["darbuotojai"] .'">
               <select id="project" name="editProject">
                 <option value="'. $row["projektai"] .'">'. $row["projektai"] .'</option>
               </select>
-              <input type="submit" name ="editBtn" value="Edit">
+              <a href="?action=editEmp&id='  . $row['id'] . '"><button>EDIT</button></a>
              </form>
          </div>
        </div>
