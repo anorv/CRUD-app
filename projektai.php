@@ -21,6 +21,7 @@ if (!$conn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
     <title>Projektai</title>
 </head>
 <body>
@@ -60,9 +61,27 @@ if (mysqli_num_rows($result) > 0) {
         <td>' . $row["name"] . '</td>
         <td>
         <a href="?action=deletePrj&id='  . $row['id'] . '"><button>DELETE</button></a>
-        <a href="?action=editPrj&id='  . $row['id'] . '"><button>UPDATE</button></a>
+        <button class="modalBtn">UPDATE</button>
         </td>
         </tr>');
+           // Modalas Edit
+           print('
+           <div id="modal_delivery_main">
+             <div class="modal_delivery_content">
+                <img class="modal_exit" src="close.png" alt="" />
+                <form  class="modal_form" action="" method="POST" id="create">
+                 <input type="text" name="editId" value="'. $row["id"] .'">
+                 <input type="text" name="editName" value="'. $row["project"] .'">
+                 <select id="project" name="editProject">
+                   <option value="'. $row["projektai"] .'">'. $row["name"] .'</option>
+                 </select>
+                 <input type="submit" name ="editBtn" value="Edit">
+                </form>
+            </div>
+          </div>
+          <div class="overlay hidden"></div>
+           ');
+           
         
     }
 } else {
@@ -78,6 +97,8 @@ mysqli_close($conn);
   <input type="text" name="project" for="project">
   <input type="submit" value="ADD Projektas" name ="submitPrj">
 </form>
+
+<script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
