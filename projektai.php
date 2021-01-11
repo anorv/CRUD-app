@@ -64,25 +64,7 @@ if (mysqli_num_rows($result) > 0) {
         <button class="modalBtn">UPDATE</button>
         </td>
         </tr>');
-           // Modalas Edit
-           print('
-           <div id="modal_delivery_main">
-             <div class="modal_delivery_content">
-                <img class="modal_exit" src="close.png" alt="" />
-                <form  class="modal_form" action="" method="POST" id="create">
-                 <input type="text" name="editId" value="'. $row["id"] .'">
-                 <input type="text" name="editName" value="'. $row["project"] .'">
-                 <select id="project" name="editProject">
-                   <option value="'. $row["projektai"] .'">'. $row["name"] .'</option>
-                 </select>
-                 <input type="submit" name ="editBtn" value="Edit">
-                </form>
-            </div>
-          </div>
-          <div class="overlay hidden"></div>
-           ');
-           
-        
+              
     }
 } else {
     echo "0 results";

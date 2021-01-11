@@ -14,7 +14,6 @@ if (!$conn) {
 
  require_once 'delete.php'; 
  require_once 'update.php'; 
- require_once 'edit.php'; 
 
 ?>
 <html lang="en">
@@ -61,26 +60,11 @@ if (mysqli_num_rows($result) > 0) {
         <td>' . $row["projektai"] . '</td>
         <td>
         <a href="?action=deleteEmp&id='  . $row['id'] . '"><button>DELETE</button></a>
-        <button class="modalBtn">UPDATE</button>
+        <a href="edit.php?id='  . $row['id'] . '"><button>UPDATE</button></a>
+        
         </td>
         </tr>');
-        // Modalas Edit
-        print('
-        <div id="modal_delivery_main">
-          <div class="modal_delivery_content">
-             <img class="modal_exit" src="close.png" alt="" />
-             <form  class="modal_form" action="" method="POST" id="create">
-              <input type="text" name="editName" value="'. $row["darbuotojai"] .'">
-              <select id="project" name="editProject">
-                <option value="'. $row["projektai"] .'">'. $row["projektai"] .'</option>
-              </select>
-              <a href="?action=editEmp&id='  . $row['id'] . '"><button>EDIT</button></a>
-             </form>
-         </div>
-       </div>
-       <div class="overlay hidden"></div>
-        ');
-        
+
     }
 
 } else {
@@ -96,24 +80,7 @@ mysqli_close($conn);
   <input type="text" name="name" for="name">
   <input type="submit" value="ADD Projektas" name ="submit">
 </form>
-<!-- Edit modalas -->
-<!-- <div id="modal_delivery_main">
-          <div class="modal_delivery_content">
-             <img class="modal_exit" src="close.png" alt="" />
-             <form  class="modal_form" action="" method="POST" id="create">
-              <input type="text" name="editId" value="<?php $row["id"] ?>">
-              <input type="text" name="editName" value="<?php $row["darbuotojai"] ?>">
-              <select id="project" name="editProject">
-                <option value="<?php $row["projektai"] ?>"><?php $row["projektai"] ?></option>
-              </select>
-              <input type="submit" name ="editBtn" value="Edit">
-             </form>
-         </div>
-       </div>
-       <div class="overlay hidden"></div>
-   -->
 
-<script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
