@@ -12,7 +12,7 @@ if (!$conn) {
 
 }
  require_once 'delete.php'; 
- require_once 'update.php'; 
+ require_once 'create.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +61,7 @@ if (mysqli_num_rows($result) > 0) {
         <td>' . $row["name"] . '</td>
         <td>
         <a href="?action=deletePrj&id='  . $row['id'] . '"><button>DELETE</button></a>
-        <button class="modalBtn">UPDATE</button>
+        <a href="editp.php?id='  . $row['id'] . '"><button>UPDATE</button></a>
         </td>
         </tr>');
               
