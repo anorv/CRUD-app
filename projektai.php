@@ -26,8 +26,8 @@ if (!$conn) {
 </head>
 <body>
 <div>
-  <a href='index.php'>Darbuotojai</a>
-  <a href='projektai.php'>Projektai</a>
+  <a class="text" href='index.php'>Darbuotojai</a>
+  <a  class="text" href='projektai.php'>Projektai</a>
   <h3> Projektų valdymas</h3>
 </div>
 <table class="table table-striped">
@@ -60,8 +60,8 @@ if (mysqli_num_rows($result) > 0) {
         <td>' . $row["project"] . '</td>
         <td>' . $row["name"] . '</td>
         <td>
-        <a href="?action=deletePrj&id='  . $row['id'] . '"><button>DELETE</button></a>
-        <a href="editp.php?id='  . $row['id'] . '"><button>UPDATE</button></a>
+        <a href="?action=deletePrj&id='  . $row['id'] . '"><button class="btn">DELETE</button></a>
+        <a href="editp.php?id='  . $row['id'] . '"><button class="btn" >UPDATE</button></a>
         </td>
         </tr>');
               
@@ -77,7 +77,7 @@ mysqli_close($conn);
 <!-- Add project -->
 <form  class="newFolder" action="" method="POST" id="create">
   <input type="text" name="project" for="project">
-  <input type="submit" value="ADD Projektas" name ="submitPrj">
+  <input class="btn" type="submit" value="ADD Projektas" name ="submitPrj">
 </form>
 
 <script src="script.js"></script>

@@ -1,5 +1,5 @@
 <?php
-// update darbuotoja
+// create darbuotoja
 $id=0;
 $name=$_POST['name'];
 
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     header("Location: " . strtok($_SERVER["REQUEST_URI"], '?'));
     die();
 }
-// update projektai
+// create projektai
 
 $project = $_POST['project'];
 

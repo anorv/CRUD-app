@@ -17,7 +17,8 @@ if (!$conn) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Edit</title>
 </head>
  
 <body>
@@ -28,7 +29,7 @@ if (!$conn) {
         $id = (int) $_GET['id'];
  
         $sql = "SELECT * FROM projektai 
-    WHERE id='$id'";
+        WHERE id='$id'";
  
         $query = mysqli_query($conn, $sql); // select query
  
@@ -39,7 +40,7 @@ if (!$conn) {
             $projects = $_POST['project'];
  
             $edit = mysqli_query($conn, "UPDATE projektai 
-SET project ='$projects' WHERE id='$id'");
+            SET project ='$projects' WHERE id='$id'");
  
             header("Location: projektai.php");
             die();
@@ -47,12 +48,11 @@ SET project ='$projects' WHERE id='$id'");
     }
  
     ?>
-    <form class="modal_form" action="" method="POST" id="create">
+    <h3>Redaguoti projekto pavadinimą:</h3>
+    <form class="form" action="" method="POST" id="create">
         <input type="text" name="project" value="<?php echo $row['project'] ?>">
-       
         </select>
-        <input type="submit" name="editBtnP" value="Edit">
+        <input class="btn edit" type="submit" name="editBtnP" value="EDIT">
     </form>
 </body>
- 
 </html>

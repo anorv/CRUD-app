@@ -29,7 +29,7 @@ CREATE TABLE `darbuotojai` (
   `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `project_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `darbuotojai` (
 
 LOCK TABLES `darbuotojai` WRITE;
 /*!40000 ALTER TABLE `darbuotojai` DISABLE KEYS */;
-INSERT INTO `darbuotojai` VALUES (1,'Petras',17),(32,'Nauja',22),(33,'s',22);
+INSERT INTO `darbuotojai` VALUES (1,'Lina',3),(2,'Jonas',1),(3,'Mindaugas',1),(39,'Aurelija ',NULL),(40,'Tomas',2);
 /*!40000 ALTER TABLE `darbuotojai` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +53,7 @@ CREATE TABLE `projektai` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `project` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `projektai` (
 
 LOCK TABLES `projektai` WRITE;
 /*!40000 ALTER TABLE `projektai` DISABLE KEYS */;
-INSERT INTO `projektai` VALUES (17,'PHP'),(19,'Php2'),(21,'CSS');
+INSERT INTO `projektai` VALUES (1,'PHP'),(2,'VS'),(3,'CSS'),(24,'HTML');
 /*!40000 ALTER TABLE `projektai` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-11 14:27:17
+-- Dump completed on 2021-01-12 15:55:06

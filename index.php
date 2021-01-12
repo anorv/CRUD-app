@@ -27,8 +27,8 @@ if (!$conn) {
 </head>
 <body>
 <div>
-  <a href='index.php'>Darbuotojai</a>
-  <a href='projektai.php'>Projektai</a>
+  <a  class="text" href='index.php'>Darbuotojai</a>
+  <a class="text" href='projektai.php'>Projektai</a>
   <h3> Projektų valdymas</h3>
 </div>
 
@@ -59,18 +59,17 @@ if (mysqli_num_rows($result) > 0) {
         <td>' . $row["darbuotojai"] . '</td>
         <td>' . $row["projektai"] . '</td>
         <td>
-        <a href="?action=deleteEmp&id='  . $row['id'] . '"><button>DELETE</button></a>
-        <a href="edit.php?id='  . $row['id'] . '"><button>UPDATE</button></a>
+        <a href="?action=deleteEmp&id='  . $row['id'] . '"><button class="btn">DELETE</button></a>
+        <a href="edit.php?id='  . $row['id'] . '"><button class="btn">UPDATE</button></a>
         </td>
         </tr>');
     
 
     }
 
-} else {
+}else {
     echo "0 results";
 }
-
 mysqli_close($conn);
 ?>
 </tbody>
@@ -78,10 +77,8 @@ mysqli_close($conn);
 <!-- Update button -->
 <form  action="" method="POST" id="create">
   <input type="text" name="name" for="name">
-  <input type="submit" value="ADD Projektas" name ="submit">
+  <input class="btn"  type="submit" value="ADD Projektas" name ="submit">
 </form>
-
-
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
