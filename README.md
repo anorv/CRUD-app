@@ -1,8 +1,8 @@
 # CRUD-app
 
 With this easy <b>PHP</b> and <b>MySQL</b> CRUD-app you can manage your <b>Database</b> for your employees and projects. You can :
-- Add new employee or project;
-- Assigning new project for employees, in one project can work more then one employee;
+- Add new employees or projects;
+- Assigning new projects for employees, in one project can work more then one employee;
 - Delete employees and projects;
 
 <h4> How to use CRUD-app:</h4>
