@@ -1,6 +1,6 @@
 # CRUD-app
 
-With this easy <b>PHP</b> and <b>MySQL</b> CRUD-app you can manage your <b>Database</b> for your employees and projects. You can :
+With this <b>PHP</b> and <b>MySQL</b> CRUD-app you can manage your <b>Database</b> for yours employees and projects. You can :
 - Add new employees or projects;
 - Assigning new projects for employees, in one project can work more then one employee;
 - Delete employees and projects;
@@ -14,7 +14,7 @@ With this easy <b>PHP</b> and <b>MySQL</b> CRUD-app you can manage your <b>Datab
   <br>
   <h5>Then follow these steps:</h5>
 - Open MySQL and create your <b> Local Server</b>:
--  Downloads this repository ZIP file;
+-  Download this repository ZIP file;
 - Extract that file and move it to the folder named www you can find it in C:\Program Files\Ampps. If you don't found it, check where you installed AMPPS;
 - Go to browser and in web address field write http://localhost/ and press enter.
 - find "CRUD-app" file and open it;
