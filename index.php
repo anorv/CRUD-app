@@ -77,7 +77,7 @@ mysqli_close($conn);
 <!-- Update button -->
 <form  action="" method="POST" id="create">
   <input type="text" name="name" for="name">
-  <input class="btn"  type="submit" value="ADD Projektas" name ="submit">
+  <input class="btn"  type="submit" value="ADD Project" name ="submit">
 </form>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
